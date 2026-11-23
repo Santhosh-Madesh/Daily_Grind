@@ -1,0 +1,744 @@
+
+
+/* =========================================
+   DAILY GRIND — CORE TYPOGRAPHY SYSTEM
+   ========================================= */
+
+/* 1. FONT & TAILWIND IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+
+/* 2. TYPOGRAPHY TOKENS */
+:root {
+  /* Font Families */
+  --font-headline: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-label: 'Plus Jakarta Sans', sans-serif;
+
+  /* Headline */
+  --headline-xl-size: 48px;
+  --headline-xl-weight: 600;
+  --headline-xl-line: 56px;
+  --headline-xl-spacing: -0.02em;
+
+  --headline-lg-size: 36px;
+  --headline-lg-weight: 600;
+  --headline-lg-line: 44px;
+  --headline-lg-spacing: -0.01em;
+
+  --headline-md-size: 26px;
+  --headline-md-weight: 500;
+  --headline-md-line: 34px;
+
+  --headline-sm-size: 20px;
+  --headline-sm-weight: 500;
+  --headline-sm-line: 28px;
+
+  /* Body */
+  --body-lg-size: 18px;
+  --body-lg-weight: 400;
+  --body-lg-line: 28px;
+
+  --body-md-size: 15px;
+  --body-md-weight: 400;
+  --body-md-line: 24px;
+
+  --body-sm-size: 13px;
+  --body-sm-weight: 400;
+  --body-sm-line: 20px;
+
+  /* Labels */
+  --label-lg-size: 14px;
+  --label-lg-weight: 600;
+  --label-lg-line: 20px;
+  --label-lg-spacing: 0.02em;
+
+  --label-md-size: 12px;
+  --label-md-weight: 600;
+  --label-md-line: 16px;
+  --label-md-spacing: 0.04em;
+
+  --label-sm-size: 11px;
+  --label-sm-weight: 600;
+  --label-sm-line: 14px;
+  --label-sm-spacing: 0.06em;
+/* =========================================
+   DAILY GRIND — DESIGN TOKENS
+   ========================================= */
+
+/* FONT FAMILIES */
+--font-headline: 'Playfair Display', serif;
+--font-body: 'Plus Jakarta Sans', sans-serif;
+--font-label: 'Plus Jakarta Sans', sans-serif;
+
+
+/* =========================================
+   COLOR PALETTE
+   ========================================= */
+
+/* Brand Colors */
+--dg-primary: #38251E;
+--dg-secondary: #B47B4D;
+--dg-tertiary: #D8C3A5;
+--dg-neutral: #F6F0E7;
+--dg-white: #FFFFFF;
+--dg-charcoal: #24211F;
+
+/* Text Colors */
+--dg-text-primary: #38251E;
+--dg-text-secondary: #5D4B43;
+--dg-text-inverse: #FFFFFF;
+--dg-text-muted: #817470;
+
+/* Surface Colors */
+--dg-surface: #F6F0E7;
+--dg-surface-dim: #E7E0D6;
+--dg-surface-bright: #FFF9EF;
+
+--dg-surface-container-lowest: #FFFFFF;
+--dg-surface-container-low: #FFF9EF;
+--dg-surface-container: #F6F0E7;
+--dg-surface-container-high: #EDE4D8;
+--dg-surface-container-highest: #E4D8C9;
+
+/* Borders */
+--dg-border: #D8C3A5;
+--dg-border-subtle: rgba(216, 195, 165, 0.6);
+--dg-border-strong: #B47B4D;
+
+/* Interactive Colors */
+--dg-primary-hover: #B47B4D;
+--dg-secondary-hover: #96613C;
+--dg-focus: #B47B4D;
+
+/* Status Colors */
+--dg-error: #BA1A1A;
+--dg-error-container: #FFDAD6;
+--dg-success: #386641;
+--dg-warning: #A66A20;
+
+/* Overlays & Shadows */
+--dg-overlay: rgba(36, 33, 31, 0.6);
+--dg-focus-glow: rgba(180, 123, 77, 0.15);
+--dg-secondary-soft: rgba(180, 123, 77, 0.2);
+
+--dg-shadow-card: 0 2px 8px rgba(56, 37, 30, 0.04);
+--dg-shadow-elevated: 0 8px 30px -4px rgba(56, 37, 30, 0.08);
+--dg-shadow-focus: 0 0 0 3px var(--dg-focus-glow);
+
+
+/* =========================================
+   SPACING TOKENS
+   ========================================= */
+
+/* Layout */
+--dg-gutter: 1.5rem;
+--dg-gutter-mobile: 1rem;
+--dg-margin: 3rem;
+--dg-margin-mobile: 1.25rem;
+
+/* Component Spacing */
+--dg-space-xs: 0.25rem;
+--dg-space-sm: 0.5rem;
+--dg-space-md: 1rem;
+--dg-space-lg: 1.5rem;
+--dg-space-xl: 2.5rem;
+--dg-space-2xl: 5rem;
+
+/* Container */
+--dg-container-max: 1280px;
+
+
+/* =========================================
+   BORDER RADIUS TOKENS
+   ========================================= */
+
+--dg-radius-sm: 0.125rem;
+--dg-radius: 0.25rem;
+--dg-radius-md: 0.375rem;
+--dg-radius-lg: 0.5rem;
+--dg-radius-xl: 0.75rem;
+--dg-radius-full: 9999px;
+}
+
+
+/* 3. HEADLINE UTILITY CLASSES */
+
+.text-headline-xl {
+  font-family: var(--font-headline);
+  font-size: var(--headline-xl-size);
+  font-weight: var(--headline-xl-weight);
+  line-height: var(--headline-xl-line);
+  letter-spacing: var(--headline-xl-spacing);
+}
+
+.text-headline-lg {
+  font-family: var(--font-headline);
+  font-size: var(--headline-lg-size);
+  font-weight: var(--headline-lg-weight);
+  line-height: var(--headline-lg-line);
+  letter-spacing: var(--headline-lg-spacing);
+}
+
+.text-headline-md {
+  font-family: var(--font-headline);
+  font-size: var(--headline-md-size);
+  font-weight: var(--headline-md-weight);
+  line-height: var(--headline-md-line);
+}
+
+.text-headline-sm {
+  font-family: var(--font-headline);
+  font-size: var(--headline-sm-size);
+  font-weight: var(--headline-sm-weight);
+  line-height: var(--headline-sm-line);
+}
+
+
+/* 4. BODY UTILITY CLASSES */
+
+.text-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--body-lg-size);
+  font-weight: var(--body-lg-weight);
+  line-height: var(--body-lg-line);
+}
+
+.text-body-md {
+  font-family: var(--font-body);
+  font-size: var(--body-md-size);
+  font-weight: var(--body-md-weight);
+  line-height: var(--body-md-line);
+}
+
+.text-body-sm {
+  font-family: var(--font-body);
+  font-size: var(--body-sm-size);
+  font-weight: var(--body-sm-weight);
+  line-height: var(--body-sm-line);
+}
+
+
+/* 5. LABEL UTILITY CLASSES */
+
+.text-label-lg {
+  font-family: var(--font-label);
+  font-size: var(--label-lg-size);
+  font-weight: var(--label-lg-weight);
+  line-height: var(--label-lg-line);
+  letter-spacing: var(--label-lg-spacing);
+}
+
+.text-label-md {
+  font-family: var(--font-label);
+  font-size: var(--label-md-size);
+  font-weight: var(--label-md-weight);
+  line-height: var(--label-md-line);
+  letter-spacing: var(--label-md-spacing);
+}
+
+.text-label-sm {
+  font-family: var(--font-label);
+  font-size: var(--label-sm-size);
+  font-weight: var(--label-sm-weight);
+  line-height: var(--label-sm-line);
+  letter-spacing: var(--label-sm-spacing);
+}
+
+
+/* 6. RESPONSIVE HEADLINES */
+
+@media (max-width: 767px) {
+  .text-headline-xl {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+  }
+
+  .text-headline-lg {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0em;
+  }
+}
+
+
+/* 7. GLOBAL HTML DEFAULTS */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--body-md-size);
+  font-weight: 400;
+  line-height: var(--body-md-line);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* =========================================
+   DAILY GRIND — COLOR UTILITIES
+   ========================================= */
+
+/* Backgrounds */
+.dg-bg-primary { background-color: var(--dg-primary); }
+.dg-bg-secondary { background-color: var(--dg-secondary); }
+.dg-bg-tertiary { background-color: var(--dg-tertiary); }
+.dg-bg-neutral { background-color: var(--dg-neutral); }
+.dg-bg-white { background-color: var(--dg-white); }
+.dg-bg-charcoal { background-color: var(--dg-charcoal); }
+.dg-bg-surface { background-color: var(--dg-surface); }
+.dg-bg-surface-low { background-color: var(--dg-surface-container-low); }
+.dg-bg-surface-high { background-color: var(--dg-surface-container-high); }
+
+/* Text */
+.dg-text-primary { color: var(--dg-text-primary); }
+.dg-text-secondary { color: var(--dg-text-secondary); }
+.dg-text-inverse { color: var(--dg-text-inverse); }
+.dg-text-muted { color: var(--dg-text-muted); }
+
+/* Borders */
+.dg-border-primary { border-color: var(--dg-primary); }
+.dg-border-secondary { border-color: var(--dg-secondary); }
+.dg-border-tertiary { border-color: var(--dg-tertiary); }
+.dg-border-subtle { border-color: var(--dg-border-subtle); }
+.dg-border-strong { border-color: var(--dg-border-strong); }
+
+
+/* =========================================
+   DAILY GRIND — SPACING UTILITIES
+   ========================================= */
+
+/* Padding */
+.dg-p-xs { padding: var(--dg-space-xs); }
+.dg-p-sm { padding: var(--dg-space-sm); }
+.dg-p-md { padding: var(--dg-space-md); }
+.dg-p-lg { padding: var(--dg-space-lg); }
+.dg-p-xl { padding: var(--dg-space-xl); }
+
+/* Horizontal Padding */
+.dg-px-xs { padding-inline: var(--dg-space-xs); }
+.dg-px-sm { padding-inline: var(--dg-space-sm); }
+.dg-px-md { padding-inline: var(--dg-space-md); }
+.dg-px-lg { padding-inline: var(--dg-space-lg); }
+.dg-px-xl { padding-inline: var(--dg-space-xl); }
+
+/* Vertical Padding */
+.dg-py-xs { padding-block: var(--dg-space-xs); }
+.dg-py-sm { padding-block: var(--dg-space-sm); }
+.dg-py-md { padding-block: var(--dg-space-md); }
+.dg-py-lg { padding-block: var(--dg-space-lg); }
+.dg-py-xl { padding-block: var(--dg-space-xl); }
+
+/* Margin */
+.dg-m-xs { margin: var(--dg-space-xs); }
+.dg-m-sm { margin: var(--dg-space-sm); }
+.dg-m-md { margin: var(--dg-space-md); }
+.dg-m-lg { margin: var(--dg-space-lg); }
+.dg-m-xl { margin: var(--dg-space-xl); }
+
+/* Horizontal Margin */
+.dg-mx-xs { margin-inline: var(--dg-space-xs); }
+.dg-mx-sm { margin-inline: var(--dg-space-sm); }
+.dg-mx-md { margin-inline: var(--dg-space-md); }
+.dg-mx-lg { margin-inline: var(--dg-space-lg); }
+.dg-mx-xl { margin-inline: var(--dg-space-xl); }
+
+/* Vertical Margin */
+.dg-my-xs { margin-block: var(--dg-space-xs); }
+.dg-my-sm { margin-block: var(--dg-space-sm); }
+.dg-my-md { margin-block: var(--dg-space-md); }
+.dg-my-lg { margin-block: var(--dg-space-lg); }
+.dg-my-xl { margin-block: var(--dg-space-xl); }
+
+/* Gap */
+.dg-gap-xs { gap: var(--dg-space-xs); }
+.dg-gap-sm { gap: var(--dg-space-sm); }
+.dg-gap-md { gap: var(--dg-space-md); }
+.dg-gap-lg { gap: var(--dg-space-lg); }
+.dg-gap-xl { gap: var(--dg-space-xl); }
+
+/* Layout */
+.dg-gutter {
+  padding-inline: var(--dg-gutter);
+}
+
+.dg-section-spacing {
+  margin-block: var(--dg-space-2xl);
+}
+
+.dg-page-container {
+  width: 100%;
+  max-width: var(--dg-container-max);
+  margin-inline: auto;
+  padding-inline: var(--dg-margin);
+}
+
+
+/* =========================================
+   DAILY GRIND — RADIUS UTILITIES
+   ========================================= */
+
+.dg-rounded-sm { border-radius: var(--dg-radius-sm); }
+.dg-rounded { border-radius: var(--dg-radius); }
+.dg-rounded-md { border-radius: var(--dg-radius-md); }
+.dg-rounded-lg { border-radius: var(--dg-radius-lg); }
+.dg-rounded-xl { border-radius: var(--dg-radius-xl); }
+.dg-rounded-full { border-radius: var(--dg-radius-full); }
+
+
+/* =========================================
+   DAILY GRIND — BUTTONS
+   ========================================= */
+
+.dg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dg-space-sm);
+  padding: 0.75rem 1.5rem;
+
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--dg-radius);
+  cursor: pointer;
+  text-decoration: none;
+
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+/* Primary */
+.dg-btn-primary {
+  background-color: var(--dg-primary);
+  color: var(--dg-white);
+  border-color: var(--dg-primary);
+}
+
+.dg-btn-primary:hover {
+  background-color: var(--dg-primary-hover);
+  border-color: var(--dg-primary-hover);
+}
+
+/* Secondary */
+.dg-btn-secondary {
+  background-color: transparent;
+  color: var(--dg-primary);
+  border: 1.5px solid var(--dg-primary);
+}
+
+.dg-btn-secondary:hover {
+  background-color: var(--dg-secondary-soft);
+}
+
+/* Tertiary */
+.dg-btn-tertiary {
+  padding: 0;
+  background: transparent;
+  color: var(--dg-primary);
+  border: none;
+  border-radius: 0;
+
+  text-decoration: underline;
+  text-decoration-color: var(--dg-secondary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.dg-btn-tertiary:hover {
+  color: var(--dg-secondary);
+}
+
+.dg-btn:focus-visible {
+  outline: 2px solid var(--dg-focus);
+  outline-offset: 3px;
+}
+
+.dg-btn:disabled,
+.dg-btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   DAILY GRIND — CARDS
+   ========================================= */
+
+.dg-card {
+  background-color: var(--dg-white);
+  border: 1px solid var(--dg-border-subtle);
+  border-radius: var(--dg-radius-lg);
+  box-shadow: var(--dg-shadow-card);
+}
+
+.dg-card-elevated {
+  background-color: var(--dg-white);
+  border: 1px solid var(--dg-border-subtle);
+  border-radius: var(--dg-radius-lg);
+  box-shadow: var(--dg-shadow-elevated);
+}
+
+.dg-card-content {
+  padding: var(--dg-space-lg);
+}
+
+
+/* =========================================
+   DAILY GRIND — CHIPS
+   ========================================= */
+
+.dg-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+
+  font-family: var(--font-body);
+  font-size: var(--body-sm-size);
+  font-weight: 400;
+  line-height: var(--body-sm-line);
+
+  color: var(--dg-primary);
+  background-color: transparent;
+  border: 1px solid var(--dg-border);
+  border-radius: var(--dg-radius-full);
+  cursor: pointer;
+
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.dg-chip:hover {
+  background-color: var(--dg-secondary-soft);
+}
+
+.dg-chip-active,
+.dg-chip[aria-pressed="true"] {
+  background-color: var(--dg-secondary);
+  color: var(--dg-white);
+  border-color: var(--dg-secondary);
+}
+
+
+/* =========================================
+   DAILY GRIND — FORM ELEMENTS
+   ========================================= */
+
+.dg-input,
+.dg-select,
+.dg-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+
+  font-family: var(--font-body);
+  font-size: var(--body-md-size);
+  font-weight: 400;
+  line-height: var(--body-md-line);
+
+  color: var(--dg-primary);
+  background-color: var(--dg-white);
+  border: 1px solid var(--dg-border);
+  border-radius: var(--dg-radius);
+
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.dg-input::placeholder,
+.dg-textarea::placeholder {
+  color: var(--dg-primary);
+  opacity: 0.45;
+}
+
+.dg-input:focus,
+.dg-select:focus,
+.dg-textarea:focus {
+  outline: none;
+  border: 1.5px solid var(--dg-focus);
+  box-shadow: var(--dg-shadow-focus);
+}
+
+.dg-input:disabled,
+.dg-select:disabled,
+.dg-textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dg-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Checkbox & Radio */
+.dg-checkbox,
+.dg-radio {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--dg-primary);
+  cursor: pointer;
+}
+
+.dg-checkbox:focus-visible,
+.dg-radio:focus-visible {
+  outline: 2px solid var(--dg-focus);
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   DAILY GRIND — COFFEE COMPONENTS
+   ========================================= */
+
+/* Roast Scale */
+.dg-roast-scale {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dg-roast-pip {
+  width: 1.25rem;
+  height: 0.375rem;
+  background-color: rgba(216, 195, 165, 0.4);
+  border-radius: var(--dg-radius-full);
+}
+
+.dg-roast-pip-active {
+  background-color: var(--dg-primary);
+}
+
+/* Flavor Tags */
+.dg-flavor-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+
+  color: var(--dg-primary);
+  background-color: var(--dg-neutral);
+  border-radius: var(--dg-radius);
+
+  font-family: var(--font-body);
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-line);
+}
+
+/* Brew Guide Accordion */
+.dg-accordion {
+  border-bottom: 1px solid var(--dg-border);
+}
+
+.dg-accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: var(--dg-space-md);
+
+  color: var(--dg-primary);
+  background: transparent;
+  border: none;
+
+  font-family: var(--font-body);
+  font-size: var(--body-md-size);
+  text-align: left;
+  cursor: pointer;
+}
+
+.dg-accordion-content {
+  padding-bottom: var(--dg-space-lg);
+}
+
+.dg-accordion-number {
+  font-family: var(--font-headline);
+  font-size: var(--headline-md-size);
+  font-weight: 500;
+  line-height: var(--headline-md-line);
+  color: var(--dg-secondary);
+}
+
+
+/* =========================================
+   DAILY GRIND — MODAL & OVERLAY
+   ========================================= */
+
+.dg-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--dg-overlay);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.dg-modal {
+  background-color: var(--dg-white);
+  border: 1px solid var(--dg-border-subtle);
+  border-radius: var(--dg-radius-lg);
+  box-shadow: var(--dg-shadow-elevated);
+}
+
+
+/* =========================================
+   DAILY GRIND — RESPONSIVE STYLES
+   ========================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dg-page-container {
+    padding-inline: 2rem;
+  }
+
+  .dg-gutter {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .dg-page-container {
+    padding-inline: var(--dg-margin-mobile);
+  }
+
+  .dg-gutter {
+    padding-inline: var(--dg-gutter-mobile);
+  }
+
+  .dg-section-spacing {
+    margin-block: var(--dg-space-xl);
+  }
+}
+
+
+/* =========================================
+   DAILY GRIND — ACCESSIBILITY
+   ========================================= */
+
+.dg-btn:focus-visible,
+.dg-chip:focus-visible,
+.dg-accordion-trigger:focus-visible {
+  outline: 2px solid var(--dg-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dg-btn,
+  .dg-chip,
+  .dg-input,
+  .dg-select,
+  .dg-textarea {
+    transition: none;
+  }
+}
