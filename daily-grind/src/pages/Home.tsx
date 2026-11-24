@@ -1,12 +1,12 @@
 import Hero from "../components/home/hero/Hero"
-import Standard from "../components/home/Standard"
-import ProductSection from "../components/home/ProductSection"
+import StandardSection from "../components/home/standard/Standard"
+import ProductSection from "../components/home/productSection/ProductSection"
 
 export default function Home() {
     return (
     <>
         <Hero/>
-        <Standard/>
+        <StandardSection/>
         <ProductSection/>
     </>
     )
