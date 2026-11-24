@@ -155,7 +155,7 @@ function ProductSection() {
                 </p>
 
                 {/* Flavour tags */}
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-4 mb-4 flex flex-wrap gap-2">
                   {product.flavours.map((flavour) => (
                     <span
                       key={flavour}
@@ -169,7 +169,7 @@ function ProductSection() {
                 {/* Explore product */}
                 <Link
                   to="/coffee"
-                  className="dg-btn dg-btn-primary mt-6 flex w-full items-center justify-center gap-3 !py-3 text-sm"
+                  className="dg-btn dg-btn-primary mt-auto pt-6 flex w-full items-center justify-center gap-3 !py-3 text-sm"
                 >
                   Explore Product
                   <span aria-hidden="true">→</span>
