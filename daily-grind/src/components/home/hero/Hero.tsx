@@ -74,7 +74,7 @@ function Hero() {
               className="dg-btn dg-btn-primary flex w-full items-center justify-center gap-3 !py-3 text-sm font-semibold sm:w-auto sm:min-w-[154px]"
             >
               Explore Our Coffee
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className='lg:hidden'>→</span>
             </Link>
 
             <Link
