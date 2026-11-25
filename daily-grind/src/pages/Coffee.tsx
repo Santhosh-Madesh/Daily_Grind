@@ -1,9 +1,9 @@
-
+import CoffeeHero from "../components/coffee/hero/CoffeeHero"
 
 export default function Coffee() {
     return (
     <>
-        <h1>Coffee</h1>
+        <CoffeeHero/>
     </>
     )
 }
