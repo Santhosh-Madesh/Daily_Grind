@@ -1,9 +1,9 @@
-
+import ContactFormSection from "../components/contact/form/ContactFormSection"
 
 export default function Contact() {
     return (
     <>
-    <h1>Contact</h1>
+    <ContactFormSection/>
     </>
     )
 }
