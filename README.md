@@ -1,5 +1,7 @@
 # Daily Grind — Project Brief
 
+link to the project website: https://daily-grind-delta.vercel.app/
+
 ## 1. Project Overview
 
 **Project Name:** Daily Grind  
